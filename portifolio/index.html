@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Leonardo Barbosa</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo" data-key="logo">Leonardo Barbosa</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#education">Formação</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <li><button id="btnIdioma">🌍</button></li>
+        <li id="dk">
+          <label class="switch">
+            <span class="icon">🌙</span>
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+            <span class="icon">🌙</span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">&#9776;</div>
+
+    <div class="toggle-container">
+      <span class="icon">☀️</span>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle1">
+        <span class="slider"></span>
+      </label>
+      <span class="icon">🌙</span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-text">
+      <h1 data-key="heroTitle">Oi, eu sou <span>Leonardo Barbosa</span></h1>
+      <p class="fall-text" data-key="heroSubtitle">Desenvolvedor-de-Front-end</p>
+      <div class="buttons">
+        <a href="#projects" class="btn" data-key="seeProjects">Ver Projetos</a>
+        <a href="#contact" class="btn btn-alt" data-key="contactBtn">Contato</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="portifolio.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- Sobre Mim -->
+  <section id="about">
+    <h2 data-key="aboutTitle">Sobre Mim</h2>
+    <p data-key="aboutText">
+      Sou apaixonado por tecnologia e estudando Informática pelo Cotemig.
+      Tenho experiência em projetos de sistemas e bancos de dados, mas meu foco
+      atual é no desenvolvimento front-end, criando interfaces modernas, responsivas
+      e funcionais. Busco sempre evoluir como profissional e contribuir em soluções
+      que gerem impacto real.
+    </p>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="skills">
+    <h2 data-key="skillsTitle">Habilidades</h2>
+    <div class="skills-grid">
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">HTML5</div>
+      <div class="skill-card">CSS3</div>
+      <div class="skill-card">C#</div>
+      <div class="skill-card">MySQL</div>
+      <div class="skill-card">Ubuntu</div>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projects">
+    <h2 data-key="projectsTitle">Projetos</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Projeto 1</h3>
+        <p data-key="projDesc">Descrição breve do projeto.</p>
+      </div>
+      <div class="project-card">
+        <h3>Projeto 2</h3>
+        <p data-key="projDesc">Descrição breve do projeto.</p>
+      </div>
+      <div class="project-card">
+        <h3>Projeto 3</h3>
+        <p data-key="projDesc">Descrição breve do projeto.</p>
+      </div>
+      <div class="project-card">
+        <h3>Projeto 4</h3>
+        <p data-key="projDesc">Descrição breve do projeto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formação -->
+  <section id="education">
+    <h2 data-key="educationTitle">Formação</h2>
+    <ul class="timeline">
+      <li>
+        <h3 data-key="edu1">Curso Técnico automação industrial - sesi senai</h3>
+        <span>2023 - finalizado</span>
+      </li>
+      <li>
+        <h3 data-key="edu2">Curso Técnico em Informática - Cotemig</h3>
+        <span>2023 - Atual</span>
+      </li>
+      <li>
+        <h3 data-key="edu3">Ensino Médio</h3>
+        <span>2023 - 2026</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contato -->
+  <section id="contact">
+    <h2 data-key="contactTitle">Contato</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3 data-key="email">Email</h3>
+        <p>leonardosilva200826@email.com</p>
+      </div>
+      <div class="contact-card">
+        <h3 data-key="phone">Telefone</h3>
+        <p>(31) 98958-4118</p>
+      </div>
+      <div class="contact-card">
+        <h3 data-key="linkedin">LinkedIn</h3>
+        <p><a href="https://linkedin.com/in/seu-perfil" target="_blank">linkedin.com/in/seu-perfil</a></p>
+      </div>
+      <div class="contact-card">
+        <h3 data-key="github">GitHub</h3>
+        <p><a href="https://github.com/seu-usuario" target="_blank">github.com/seu-usuario</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p data-key="footer">© 2025 Leonardo Barbosa — Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    // Menu responsivo
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
