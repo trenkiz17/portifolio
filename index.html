@@ -1,164 +1,619 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio - Leonardo Barbosa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d16">
+  <meta name="description"
+    content="Portfólio de Leonardo Barbosa — estudante de Informática no COTEMIG, com foco em desenvolvimento front-end, sistemas web e projetos de tecnologia.">
+  <meta name="author" content="Leonardo Barbosa">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Leonardo Barbosa | Desenvolvedor Front-end">
+  <meta property="og:description"
+    content="Conheça meus projetos, minhas habilidades e minha jornada no desenvolvimento de software.">
+  <meta property="og:url" content="https://trenkiz17.github.io/portifolio/">
+  <meta property="og:image" content="https://trenkiz17.github.io/portifolio/assets/leo.png">
+  <link rel="canonical" href="https://trenkiz17.github.io/portifolio/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <noscript>
+    <style>
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important
+      }
+    </style>
+  </noscript>
+  <script src="script.js?v=20261022-i18n-final-3" defer></script>
+  <title>Leonardo Barbosa — Desenvolvedor Front-end</title>
 </head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="logo" data-key="logo">Leonardo Barbosa</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#hero">Início</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#education">Formação</a></li>
-        <li><a href="#contact">Contato</a></li>
-        <li><button id="btnIdioma">🌍</button></li>
-        <li id="dk">
-          <label class="switch">
-            <span class="icon">🌙</span>
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider"></span>
-            <span class="icon">🌙</span>
-          </label>
-        </li>
-      </ul>
-    </nav>
-    <div class="menu-toggle">&#9776;</div>
 
-    <div class="toggle-container">
-      <span class="icon">☀️</span>
-      <label class="switch">
-        <input type="checkbox" id="darkModeToggle1">
-        <span class="slider"></span>
-      </label>
-      <span class="icon">🌙</span>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Pular para o conteúdo</a>
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14m-7-7 7 7-7 7" />
+    </symbol>
+    <symbol id="i-up-right" viewBox="0 0 24 24">
+      <path d="M7 17 17 7M8 7h9v9" />
+    </symbol>
+    <symbol id="i-github" viewBox="0 0 24 24">
+      <path
+        d="M9 19c-4.3 1.5-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.95-2.65c3.2-.36 6.55-1.57 6.55-7.17A5.6 5.6 0 0 0 19 4.4 5.2 5.2 0 0 0 18.9.5S17.65.14 15 2.1a13.5 13.5 0 0 0-7 0C5.35.14 4.1.5 4.1.5A5.2 5.2 0 0 0 4 4.4a5.6 5.6 0 0 0-1.6 3.88c0 5.58 3.35 6.82 6.55 7.17A3.4 3.4 0 0 0 8 18.1V22" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m3 7 9 6 9-6" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4" />
+      <path
+        d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path d="M20.9 13a9 9 0 0 1-9.9-9.9A9 9 0 1 0 20.9 13Z" />
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="m5 5 14 14M19 5 5 19" />
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24">
+      <rect x="8" y="8" width="12" height="12" rx="2" />
+      <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12 5 5L20 7" />
+    </symbol>
+    <symbol id="i-location" viewBox="0 0 24 24">
+      <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+      <circle cx="12" cy="10" r="2.5" />
+    </symbol>
+  </svg>
+
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Leonardo Barbosa - início"><span
+          class="brand-symbol">L<span>.</span></span><span class="brand-name">LEONARDO<span class="brand-small"
+            data-i18n="brandSubheading">/ PORTFÓLIO DEV</span></span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#inicio" class="nav-link active" data-i18n="navHome">Início</a>
+        <a href="#sobre" class="nav-link" data-i18n="navAbout">Sobre</a>
+        <a href="#projetos" class="nav-link" data-i18n="navProjects">Projetos</a>
+        <a href="#habilidades" class="nav-link" data-i18n="navSkills">Habilidades</a>
+        <a href="#formacao" class="nav-link" data-i18n="navEducation">Formação</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn lang-btn" id="lang-toggle" type="button" aria-label="Mudar para inglês"
+          title="Mudar para inglês">EN</button>
+        <button class="icon-btn theme-btn" id="theme-toggle" type="button" aria-label="Ativar tema claro"
+          title="Alternar tema"><svg class="theme-sun">
+            <use href="#i-sun" />
+          </svg><svg class="theme-moon">
+            <use href="#i-moon" />
+          </svg></button>
+        <a class="header-contact" href="#contato"><span data-i18n="navContact">Contato</span><svg>
+            <use href="#i-up-right" />
+          </svg></a>
+        <button class="icon-btn mobile-menu-btn" id="menu-toggle" type="button" aria-controls="main-nav"
+          aria-expanded="false" aria-label="Abrir menu"><svg class="menu-svg">
+            <use href="#i-menu" />
+          </svg><svg class="close-svg">
+            <use href="#i-close" />
+          </svg></button>
+      </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="hero">
-    <div class="hero-text">
-      <h1 data-key="heroTitle">Oi, eu sou <span>Leonardo Barbosa</span></h1>
-      <p class="fall-text" data-key="heroSubtitle">Desenvolvedor-de-Front-end</p>
-      <div class="buttons">
-        <a href="#projects" class="btn" data-key="seeProjects">Ver Projetos</a>
-        <a href="#contact" class="btn btn-alt" data-key="contactBtn">Contato</a>
+  <main id="main">
+    <section class="hero section-pad" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="availability"><span class="availability-pulse"></span><span data-i18n="availability">ABERTO A
+              OPORTUNIDADES DE ESTÁGIO</span><span class="availability-dot">✦</span></div>
+          <p class="hero-kicker" data-i18n="heroKicker">OLÁ, PRAZER! EU SOU O LEONARDO <span class="wave">✳</span></p>
+          <h1 id="hero-title"><span data-i18n="heroLine1">Criando o futuro,</span><br><span class="heading-gradient"
+              data-i18n="heroLine2">uma linha de código</span><br><span data-i18n="heroLine3">de cada vez.</span></h1>
+          <p class="hero-description" data-i18n="heroDescription">Estudante de Informática no COTEMIG e desenvolvedor em
+            formação. Transformo ideias em experiências digitais modernas, funcionais e feitas com atenção a cada
+            detalhe.</p>
+          <div class="hero-buttons">
+            <a class="button button-primary" href="#projetos"><span data-i18n="heroProjects">Explorar
+                projetos</span><svg>
+                <use href="#i-arrow" />
+              </svg></a>
+            <a class="button button-outline" href="https://github.com/trenkiz17" target="_blank"
+              rel="noopener noreferrer"><svg>
+                <use href="#i-github" />
+              </svg> GitHub <svg class="mini-ext">
+                <use href="#i-up-right" />
+              </svg></a>
+          </div>
+          <div class="hero-meta"><span class="meta-divider"></span><span><svg>
+                <use href="#i-location" />
+              </svg><span data-i18n="heroLocation">Brasil · Desenvolvimento remoto</span></span><span
+              class="meta-separator">/</span><span data-i18n="heroRole">FRONT-END & SISTEMAS WEB</span></div>
+        </div>
+        <div class="hero-visual" aria-label="Fotografia de Leonardo Barbosa">
+          <div class="portrait-outer">
+            <div class="portrait-frame"><img src="assets/leo.png" alt="Leonardo Barbosa em uma selfie no espelho"
+                width="1536" height="2048" fetchpriority="high"></div>
+            <div class="portrait-wash"></div>
+            <div class="portrait-side-label" data-i18n="portraitSide">DEV / 2026 <span>·</span> PORTFÓLIO</div>
+          </div>
+          <div class="floating-card code-floating"><span class="float-leds"><i></i><i></i><i></i></span><span
+              class="code-line"><span class="syntax-violet">const</span> <span class="syntax-light">leonardo</span> =
+              {</span><span class="code-line indent"><span data-i18n="codeFocus">foco:</span> <span
+                class="syntax-yellow">'front-end'</span>,</span><span class="code-line indent"><span
+                data-i18n="codeMindset">mentalidade:</span> <span class="syntax-yellow"
+                data-i18n="codeEvolve">'evoluir'</span></span><span class="code-line">};</span></div>
+          <div class="floating-card photo-tag"><span class="tag-star">✳</span><span data-i18n="portraitTag">Curioso por
+              natureza.<br>Dev por escolha.</span></div>
+          <div class="portrait-index">01 <span>/</span> 05</div>
+        </div>
       </div>
+      <a href="#sobre" class="scroll-cue" aria-label="Rolar para seção Sobre"><span class="scroll-line"></span><span
+          data-i18n="scroll">ROLE PARA EXPLORAR</span></a>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>HTML5</span><i>✳</i><span>CSS3</span><i>✳</i><span>JAVASCRIPT</span><i>✳</i><span>PYTHON</span><i>✳</i><span>MICROSOFT
+          365</span><i>✳</i><span>GIT &
+          GITHUB</span><i>✳</i><span>FRONT-END</span><i>✳</i><span>HTML5</span><i>✳</i><span>CSS3</span><i>✳</i><span>JAVASCRIPT</span><i>✳</i><span>PYTHON</span><i>✳</i><span>MICROSOFT
+          365</span><i>✳</i><span>GIT & GITHUB</span><i>✳</i><span>FRONT-END</span><i>✳</i></div>
     </div>
-    <div class="hero-img">
-      <img src="portifolio.jpg" alt="">
-    </div>
-  </section>
 
-  <!-- Sobre Mim -->
-  <section id="about">
-    <h2 data-key="aboutTitle">Sobre Mim</h2>
-    <p data-key="aboutText">
-      Sou apaixonado por tecnologia e estudando Informática pelo Cotemig.
-      Tenho experiência em projetos de sistemas e bancos de dados, mas meu foco
-      atual é no desenvolvimento front-end, criando interfaces modernas, responsivas
-      e funcionais. Busco sempre evoluir como profissional e contribuir em soluções
-      que gerem impacto real.
-    </p>
-  </section>
+    <section id="sobre" class="section section-about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <div class="eyebrow"><span class="number">01 /</span><span data-i18n="aboutEyebrow">QUEM SOU EU</span></div>
+          <h2 id="about-title" data-i18n="aboutTitle">Tecnologia é minha forma de <em>criar possibilidades.</em></h2>
+          <div class="heading-line"></div>
+        </div>
+        <div class="about-content reveal">
+          <p class="about-lead" data-i18n="aboutLead">Mais do que escrever código, gosto de entender problemas e
+            transformar ideias em soluções que façam sentido.</p>
+          <p data-i18n="aboutP1">Sou Leonardo Barbosa, estudante do curso Técnico em Informática no COTEMIG, com
+            formação concluída em Automação Industrial pelo SESI SENAI. Minha jornada une raciocínio lógico,
+            criatividade e vontade de aprender.</p>
+          <p data-i18n="aboutP2">Tenho interesse especial em desenvolvimento front-end, mas também exploro back-end,
+            banco de dados e integração de sistemas. Meu objetivo é evoluir em projetos reais, colaborar com boas
+            equipes e construir experiências digitais cada vez melhores.</p>
+          <div class="about-note">
+            <div class="about-note-icon">↗</div>
+            <div><strong data-i18n="aboutNoteTitle">Meu próximo passo</strong><span data-i18n="aboutNoteText">Uma
+                oportunidade de estágio em tecnologia para aprender, contribuir e crescer.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Habilidades -->
-  <section id="skills">
-    <h2 data-key="skillsTitle">Habilidades</h2>
-    <div class="skills-grid">
-      <div class="skill-card">JavaScript</div>
-      <div class="skill-card">HTML5</div>
-      <div class="skill-card">CSS3</div>
-      <div class="skill-card">C#</div>
-      <div class="skill-card">MySQL</div>
-      <div class="skill-card">Ubuntu</div>
-    </div>
-  </section>
+    <section id="projetos" class="section section-projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <div class="eyebrow"><span class="number">02 /</span><span data-i18n="projectsEyebrow">TRABALHOS
+                SELECIONADOS</span></div>
+            <h2 id="projects-title" data-i18n="projectsTitle">Projetos que <em>contam histórias.</em></h2>
+          </div>
+          <p data-i18n="projectsIntro">Da ideia à implementação. Um pouco do que venho construindo e aprendendo na
+            prática.</p>
+        </div>
+        <article class="featured-project reveal">
+          <div class="project-showcase" aria-label="Representação ilustrativa do painel AgroRisk">
+            <div class="showcase-glow"></div>
+            <div class="mock-window">
+              <div class="mock-topbar">
+                <div class="mock-dots"><i></i><i></i><i></i></div><span data-i18n="mockWindowName">agrorisk /
+                  painel</span><span class="mock-top-tag" data-i18n="mockOnline">● sistema online</span>
+              </div>
+              <div class="mock-body">
+                <div class="mock-sidebar">
+                  <div class="mock-logo">A<span>✳</span></div>
+                  <div class="mock-sidebar-line selected"></div>
+                  <div class="mock-sidebar-line"></div>
+                  <div class="mock-sidebar-line"></div>
+                  <div class="mock-sidebar-line short"></div>
+                </div>
+                <div class="mock-main">
+                  <div class="mock-title">Agro<span>RISK</span><small data-i18n="mockDashboard">visão geral do
+                      painel</small></div>
+                  <div class="mock-stats">
+                    <div><small data-i18n="mockProperties">PROPRIEDADES</small><strong>—</strong><span
+                        data-i18n="mockOverview">Visão geral</span></div>
+                    <div><small data-i18n="mockCrops">SAFRAS</small><strong>—</strong><span
+                        data-i18n="mockTracking">Acompanhamento</span></div>
+                    <div><small data-i18n="mockReports">RELATÓRIOS</small><strong>—</strong><span
+                        data-i18n="mockAnalysis">Análise</span></div>
+                  </div>
+                  <div class="mock-chart">
+                    <div class="mock-chart-label" data-i18n="mockMonitoring">VISÃO DE MONITORAMENTO <span>↗</span></div>
+                    <svg viewBox="0 0 440 116" preserveAspectRatio="none" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="chartFade" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0" stop-color="#53e5ac" stop-opacity=".25" />
+                          <stop offset="1" stop-color="#53e5ac" stop-opacity="0" />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        d="M0 98 L45 78 L89 85 L130 42 L180 57 L230 28 L285 45 L328 20 L370 35 L415 8 L440 17 V116 H0Z"
+                        fill="url(#chartFade)" />
+                      <path d="M0 98 L45 78 L89 85 L130 42 L180 57 L230 28 L285 45 L328 20 L370 35 L415 8 L440 17"
+                        stroke="#64edb4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div><span class="showcase-caption" data-i18n="illustration">Visualização conceitual do projeto</span>
+          </div>
+          <div class="featured-info">
+            <div class="featured-top"><span class="project-label"><span class="label-indicator"></span><span
+                  data-i18n="featuredLabel">PROJETO EM DESTAQUE</span></span><span class="project-number">001</span>
+            </div>
+            <div>
+              <div class="project-category" data-i18n="agroCategory">SISTEMA WEB · GESTÃO RURAL</div>
+              <h3>Agro<span>Risk.</span></h3>
+              <p data-i18n="agroDescription">Plataforma para organizar a rotina de propriedades rurais, com cadastro de
+                usuários, gestão de propriedades e safras, monitoramento e relatórios. Um projeto que integra interfaces
+                web, API e banco de dados.</p>
+              <div class="project-tags"><span>HTML / CSS / JS</span><span>Python</span><span>MySQL</span><span
+                  data-i18n="tagRestApi">API REST</span></div>
+            </div><a class="project-link" href="https://github.com/trenkiz17/AgroRISK1.0" target="_blank"
+              rel="noopener noreferrer"><span data-i18n="viewCode">Ver código no GitHub</span><span
+                class="round-arrow"><svg>
+                  <use href="#i-up-right" />
+                </svg></span></a>
+          </div>
+        </article>
+        <div class="secondary-projects">
+          <article class="project-tile reveal">
+            <div class="tile-art portfolio-art">
+              <div class="tile-browser">
+                <div class="tile-browser-top"><i></i><i></i><i></i><span>leonardo.dev</span></div>
+                <div class="tile-browser-content"><span class="tile-overline" data-i18n="mockHello">OLÁ, MUNDO! ✳</span>
+                  <div class="tile-big-text" data-i18n="tileDesignCode">Design<span>e</span><br>Código<span>.</span>
+                  </div>
+                  <div class="tile-fake-button"></div>
+                </div>
+              </div><span class="tile-watermark">02</span>
+            </div>
+            <div class="tile-content">
+              <div class="tile-heading">
+                <div>
+                  <p class="project-category" data-i18n="portfolioCategory">DESENVOLVIMENTO FRONT-END</p>
+                  <h3 data-i18n="portfolioTitle">Portfólio pessoal</h3>
+                </div><a class="tile-link" href="https://trenkiz17.github.io/portifolio/" target="_blank"
+                  rel="noopener noreferrer" aria-label="Abrir portfólio publicado"><svg>
+                    <use href="#i-up-right" />
+                  </svg></a>
+              </div>
+              <p data-i18n="portfolioDescription">Meu espaço na web, desenvolvido com HTML, CSS e JavaScript para
+                compartilhar minha trajetória, habilidades e projetos.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </div>
+          </article>
+          <article class="project-tile reveal">
+            <div class="tile-art lab-art elevator-art">
+              <div class="lab-grid"></div>
+              <div class="elevator-preview" aria-hidden="true">
+                <div class="elevator-top"><span class="elevator-led"></span><span data-i18n="mockElevator">ELEVADOR /
+                    ESP32</span><span>WI-FI</span></div>
+                <div class="elevator-dashboard">
+                  <div class="elevator-shaft"><span class="floor floor-four">4</span><span
+                      class="floor floor-three active">3</span><span class="floor floor-two">2</span><span
+                      class="floor floor-one">1</span>
+                    <div class="elevator-car">▣</div>
+                  </div>
+                  <div class="elevator-status"><span data-i18n="mockFloor">ANDAR ATUAL</span><strong>3<span
+                        data-i18n="floorSuffix">º</span></strong><small data-i18n="mockStopped">● PARADO</small>
+                    <div class="elevator-controls"><i>1</i><i>2</i><i class="selected">3</i><i>4</i></div>
+                  </div>
+                </div>
+              </div><span class="tile-watermark">03</span>
+            </div>
+            <div class="tile-content">
+              <div class="tile-heading">
+                <div>
+                  <p class="project-category" data-i18n="labCategory">AUTOMAÇÃO · INTERFACE WEB</p>
+                  <h3 data-i18n="labTitle">Elevador ESP32</h3>
+                </div><a class="tile-link" href="https://trenkiz17.github.io/trabaiolipe/" target="_blank"
+                  rel="noopener noreferrer" aria-label="Abrir projeto Elevador ESP32"><svg>
+                    <use href="#i-up-right" />
+                  </svg></a>
+              </div>
+              <p data-i18n="labDescription">Painel web para simular e acompanhar o funcionamento de um elevador, com
+                indicação de andar, estado e chamadas. Interface preparada para integração com ESP32 via Wi-Fi.</p>
+              <div class="project-tags"><span>ESP32</span><span data-i18n="tagWebInterface">Interface web</span><span
+                  data-i18n="practiceTag">Simulação</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="projects-bottom reveal"><span data-i18n="moreProjects">Sempre criando algo novo.</span><a
+            href="https://github.com/trenkiz17?tab=repositories" target="_blank" rel="noopener noreferrer"><span
+              data-i18n="allProjects">Explorar todos os repositórios</span><svg>
+              <use href="#i-up-right" />
+            </svg></a></div>
+      </div>
+    </section>
 
-  <!-- Projetos -->
-  <section id="projects">
-    <h2 data-key="projectsTitle">Projetos</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Projeto 1</h3>
-        <p data-key="projDesc">Descrição breve do projeto.</p>
-      </div>
-      <div class="project-card">
-        <h3>Projeto 2</h3>
-        <p data-key="projDesc">Descrição breve do projeto.</p>
-      </div>
-      <div class="project-card">
-        <h3>Projeto 3</h3>
-        <p data-key="projDesc">Descrição breve do projeto.</p>
-      </div>
-      <div class="project-card">
-        <h3>Projeto 4</h3>
-        <p data-key="projDesc">Descrição breve do projeto.</p>
-      </div>
-    </div>
-  </section>
+    <section id="habilidades" class="section section-skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <div class="eyebrow"><span class="number">03 /</span><span data-i18n="skillsEyebrow">MINHA CAIXA DE
+                FERRAMENTAS</span></div>
+            <h2 id="skills-title" data-i18n="skillsTitle">Tecnologias que <em>movem minhas ideias.</em></h2>
+          </div>
+          <p data-i18n="skillsIntro">Ferramentas que uso em projetos e estudos, sempre com espaço para aprender a
+            próxima.</p>
+        </div>
 
-  <!-- Formação -->
-  <section id="education">
-    <h2 data-key="educationTitle">Formação</h2>
-    <ul class="timeline">
-      <li>
-        <h3 data-key="edu1">Curso Técnico automação industrial - Sesi Senai</h3>
-        <span>2024 - 2025 finalizado</span>
-      </li>
-      <li>
-        <h3 data-key="edu2">Curso Técnico em Informática - Cotemig</h3>
-        <span>2025 - Atual</span>
-      </li>
-      <li>
-        <h3 data-key="edu3">Ensino Médio</h3>
-        <span>2023 - 2026</span>
-      </li>
-    </ul>
-  </section>
+        <div class="languages-feature reveal" aria-label="Tecnologias em destaque">
+          <div class="languages-feature-head">
+            <div class="languages-feature-title">
+              <span class="languages-overline" data-i18n="languageLabel">LINGUAGENS, BANCO DE DADOS & FERRAMENTAS</span>
+              <h3 data-i18n="languageTitle">Minhas tecnologias<span>.</span></h3>
+            </div>
+            <p data-i18n="languageIntro">Linguagens, bancos de dados e ferramentas do meu portfólio original e dos meus
+              projetos, organizados por área.</p>
+          </div>
+          <div class="language-grid">
+            <article class="language-card lang-html">
+              <div class="language-top"><span class="language-symbol" aria-hidden="true">&lt;/&gt;</span><span
+                  class="language-index">01 / 08</span></div>
+              <div class="language-detail"><span class="language-category" data-i18n="languageCategoryWeb">WEB /
+                  ESTRUTURA</span>
+                <h4>HTML<span>5</span></h4>
+                <p data-i18n="languageHtml">Estruturação semântica de páginas e conteúdo web.</p>
+              </div>
+              <div class="language-footer"><span class="language-status"><i></i><span data-i18n="languageProjects">Uso
+                    em projetos</span></span><span class="language-arrow" aria-hidden="true">↗</span></div>
+            </article>
+            <article class="language-card lang-css">
+              <div class="language-top"><span class="language-symbol" aria-hidden="true">#</span><span
+                  class="language-index">02 / 08</span></div>
+              <div class="language-detail"><span class="language-category" data-i18n="languageCategoryStyle">WEB /
+                  ESTILIZAÇÃO</span>
+                <h4>CSS<span>3</span></h4>
+                <p data-i18n="languageCss">Layouts responsivos, estilização e apresentação visual.</p>
+              </div>
+              <div class="language-footer"><span class="language-status"><i></i><span data-i18n="languageProjects">Uso
+                    em projetos</span></span><span class="language-arrow" aria-hidden="true">↗</span></div>
+            </article>
+            <article class="language-card lang-js">
+              <div class="language-top"><span class="language-symbol" aria-hidden="true">JS</span><span
+                  class="language-index">03 / 08</span></div>
+              <div class="language-detail"><span class="language-category" data-i18n="languageCategoryLogic">WEB /
+                  INTERATIVIDADE</span>
+                <h4>Java<span>Script</span></h4>
+                <p data-i18n="languageJs">Funcionalidades dinâmicas e interações nas interfaces.</p>
+              </div>
+              <div class="language-footer"><span class="language-status"><i></i><span data-i18n="languageProjects">Uso
+                    em projetos</span></span><span class="language-arrow" aria-hidden="true">↗</span></div>
+            </article>
+            <article class="language-card lang-py">
+              <div class="language-top"><span class="language-symbol" aria-hidden="true">Py</span><span
+                  class="language-index">04 / 08</span></div>
+              <div class="language-detail"><span class="language-category" data-i18n="languageCategoryBackend">LÓGICA /
+                  BACK-END</span>
+                <h4>Python<span>.</span></h4>
+                <p data-i18n="languagePy">Fundamentos de lógica, programação e desenvolvimento com Python.</p>
+              </div>
+              <div class="language-footer"><span class="language-status learning"><i></i><span
+                    data-i18n="languageBasic">Conhecimento básico</span></span><span class="language-arrow"
+                  aria-hidden="true">↗</span></div>
+            </article>
+            <article class="language-card lang-csharp">
+              <div class="language-top"><span class="language-symbol" aria-hidden="true">C#</span><span
+                  class="language-index">05 / 08</span></div>
+              <div class="language-detail"><span class="language-category"
+                  data-i18n="languageCategoryCompiled">PROGRAMAÇÃO / C#</span>
+                <h4>C<span>#</span></h4>
+                <p data-i18n="languageCsharp">Linguagem presente no meu portfólio original e nos estudos de programação.
+                </p>
+              </div>
+              <div class="language-footer"><span class="language-status learning"><i></i><span
+                    data-i18n="languageAcademic">Conhecimento acadêmico</span></span><span class="language-arrow"
+                  aria-hidden="true">↗</span></div>
+            </article>
+            <article class="language-card lang-mysql">
+              <div class="language-top"><span class="language-symbol" aria-hidden="true">DB</span><span
+                  class="language-index">06 / 08</span></div>
+              <div class="language-detail"><span class="language-category" data-i18n="languageCategoryDatabase">BANCO DE
+                  DADOS / SQL</span>
+                <h4>My<span>SQL</span></h4>
+                <p data-i18n="languageMysql">Banco de dados relacional para organizar e consultar informações.</p>
+              </div>
+              <div class="language-footer"><span class="language-status"><i></i><span
+                    data-i18n="languageStudies">Estudos e projetos</span></span><span class="language-arrow"
+                  aria-hidden="true">↗</span></div>
+            </article>
+            <article class="language-card lang-ubuntu">
+              <div class="language-top"><span class="language-symbol" aria-hidden="true">$ _</span><span
+                  class="language-index">07 / 08</span></div>
+              <div class="language-detail"><span class="language-category" data-i18n="languageCategorySystem">SISTEMA /
+                  LINUX</span>
+                <h4>Ub<span>untu</span></h4>
+                <p data-i18n="languageUbuntu">Sistema Linux e ambiente de trabalho para estudos de TI.</p>
+              </div>
+              <div class="language-footer"><span class="language-status learning"><i></i><span
+                    data-i18n="languageAcademic">Conhecimento acadêmico</span></span><span class="language-arrow"
+                  aria-hidden="true">↗</span></div>
+            </article>
+            <article class="language-card lang-microsoft">
+              <div class="language-top"><span class="language-symbol" aria-hidden="true">M365</span><span
+                  class="language-index">08 / 08</span></div>
+              <div class="language-detail"><span class="language-category"
+                  data-i18n="languageCategoryMicrosoft">PRODUTIVIDADE / OFFICE</span>
+                <h4>Microsoft <span>365</span></h4>
+                <p data-i18n="languageMicrosoft">Word, Excel, PowerPoint e ferramentas de produtividade do Microsoft
+                  365.</p>
+              </div>
+              <div class="language-footer"><span class="language-status"><i></i><span
+                    data-i18n="languageIntermediate">Intermediário</span></span><span class="language-arrow"
+                  aria-hidden="true">↗</span></div>
+            </article>
+          </div>
+        </div>
+        <div class="skills-categories">
+          <div class="skill-group reveal">
+            <div class="skill-group-header"><span class="skill-icon">&lt;/&gt;</span>
+              <div><span>01</span>
+                <h3 data-i18n="skillGroup1">Front-end</h3>
+              </div>
+            </div>
+            <p data-i18n="skillGroup1Desc">Construção de interfaces e experiências web.</p>
+            <div class="skill-pills"><span><b class="colored-dot orange"></b>HTML5</span><span><b
+                  class="colored-dot blue"></b>CSS3</span><span><b class="colored-dot yellow"></b>JavaScript</span><span
+                data-i18n="pillResponsive" data-i18n-text><b class="colored-dot violet"></b>Design responsivo</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <div class="skill-group-header"><span class="skill-icon">{ }</span>
+              <div><span>02</span>
+                <h3 data-i18n="skillGroup2">Back-end & dados</h3>
+              </div>
+            </div>
+            <p data-i18n="skillGroup2Desc">Programação, servidores e tecnologias de banco de dados.</p>
+            <div class="skill-pills"><span data-i18n="pillPython" data-i18n-text><b class="colored-dot green"></b>Python
+                · básico</span><span><b class="colored-dot violet"></b>C#</span><span data-i18n="pillDatabases"
+                data-i18n-text><b class="colored-dot blue"></b>Banco de Dados</span><span><b
+                  class="colored-dot orange"></b>MySQL / SQL</span><span data-i18n="pillRest" data-i18n-text><b
+                  class="colored-dot yellow"></b>APIs REST</span></div>
+          </div>
+          <div class="skill-group reveal">
+            <div class="skill-group-header"><span class="skill-icon">&gt;_</span>
+              <div><span>03</span>
+                <h3 data-i18n="skillGroup3">Ferramentas & sistemas</h3>
+              </div>
+            </div>
+            <p data-i18n="skillGroup3Desc">Sistemas operacionais e ferramentas para versionar e desenvolver.</p>
+            <div class="skill-pills"><span><b class="colored-dot orange"></b>Git & GitHub</span><span><b
+                  class="colored-dot green"></b>Ubuntu / Linux</span><span><b
+                  class="colored-dot blue"></b>Windows</span><span><b class="colored-dot violet"></b>Terminal</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <div class="skill-group-header"><span class="skill-icon">⚙</span>
+              <div><span>04</span>
+                <h3 data-i18n="skillGroup4">Conhecimentos técnicos</h3>
+              </div>
+            </div>
+            <p data-i18n="skillGroup4Desc">Habilidades complementares da minha formação técnica.</p>
+            <div class="skill-pills"><span data-i18n="pillHardware" data-i18n-text><b
+                  class="colored-dot blue"></b>Hardware · intermediário</span><span data-i18n="pillMicrosoft"
+                data-i18n-text><b class="colored-dot violet"></b>Microsoft 365 · intermediário</span><span
+                data-i18n="pillOffice" data-i18n-text><b class="colored-dot green"></b>Pacote Office ·
+                básico</span><span data-i18n="pillElectricity" data-i18n-text><b
+                  class="colored-dot orange"></b>Eletricidade · básico</span></div>
+          </div>
+        </div>
+        <div class="skills-note reveal"><span>✳</span>
+          <p data-i18n="skillsNote">Não é sobre saber tudo. É sobre continuar aprendendo e aplicar o conhecimento para
+            resolver problemas reais.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Contato -->
-  <section id="contact">
-    <h2 data-key="contactTitle">Contato</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3 data-key="email">Email</h3>
-        <p>leonardosilva200826@email.com</p>
+    <section id="formacao" class="section section-education" aria-labelledby="education-title">
+      <div class="container education-layout">
+        <div class="education-intro reveal">
+          <div class="eyebrow"><span class="number">04 /</span><span data-i18n="educationEyebrow">MINHA JORNADA</span>
+          </div>
+          <h2 id="education-title" data-i18n="educationTitle">Aprendendo hoje.<br><em>Construindo amanhã.</em></h2>
+          <p data-i18n="educationIntro">Minha trajetória reúne tecnologia, fundamentos de informática e conhecimentos de
+            automação industrial.</p>
+          <div class="education-decoration" aria-hidden="true"><span data-i18n="decorLearn">APRENDER</span><span
+              data-i18n="decorBuild">CRIAR</span><span data-i18n="decorRepeat">REPETIR<span
+                class="accent-dot">.</span></span></div>
+        </div>
+        <div class="education-timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-circle">01</div>
+            <div class="timeline-content">
+              <div class="timeline-row"><span class="timeline-status"><i></i><span data-i18n="statusProgress">EM
+                    ANDAMENTO</span></span><span>2025 — <span data-i18n="present">ATUAL</span></span></div>
+              <h3 data-i18n="edu1">Técnico em Informática</h3>
+              <p>COTEMIG</p><span class="timeline-description" data-i18n="edu1Desc">Programação, desenvolvimento de
+                sistemas, banco de dados e fundamentos de redes.</span>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-circle">02</div>
+            <div class="timeline-content">
+              <div class="timeline-row"><span class="timeline-status"><i></i><span data-i18n="statusProgress">EM
+                    ANDAMENTO</span></span><span>2023 — 2026</span></div>
+              <h3 data-i18n="edu2">Ensino Médio</h3>
+              <p data-i18n="edu2School">Formação escolar</p><span class="timeline-description"
+                data-i18n="edu2Desc">Formação geral integrada ao desenvolvimento de competências acadêmicas e
+                profissionais.</span>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-circle">03</div>
+            <div class="timeline-content">
+              <div class="timeline-row"><span class="timeline-status status-done"><svg>
+                    <use href="#i-check" />
+                  </svg><span data-i18n="statusComplete">CONCLUÍDO</span></span><span>2024 — 2025</span></div>
+              <h3 data-i18n="edu3">Técnico em Automação Industrial</h3>
+              <p>SESI SENAI</p><span class="timeline-description" data-i18n="edu3Desc">Base técnica em automação,
+                processos industriais e resolução de problemas.</span>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="contact-card">
-        <h3 data-key="phone">Telefone</h3>
-        <p>(31) 98958-4118</p>
-      </div>
-      <div class="contact-card">
-        <h3 data-key="linkedin">LinkedIn</h3>
-        <p><a href="https://linkedin.com/in/seu-perfil" target="_blank">linkedin.com/in/seu-perfil</a></p>
-      </div>
-      <div class="contact-card">
-        <h3 data-key="github">GitHub</h3>
-        <p><a href="https://github.com/seu-usuario" target="_blank">github.com/seu-usuario</a></p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p data-key="footer">© 2025 Leonardo Barbosa — Todos os direitos reservados</p>
+    <section id="contato" class="section section-contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-graphic" aria-hidden="true"><span>✳</span></div>
+          <div class="contact-top">
+            <div class="eyebrow"><span class="number">05 /</span><span data-i18n="contactEyebrow">VAMOS NOS
+                CONECTAR?</span></div><span class="contact-asterisk">✺</span>
+          </div>
+          <h2 id="contact-title" data-i18n="contactTitle">Tem uma ideia?<br><em>Vamos conversar.</em></h2>
+          <p data-i18n="contactDescription">Estou em busca de oportunidades para evoluir e colocar minhas habilidades em
+            prática. Se quiser trocar uma ideia sobre tecnologia, projetos ou estágio, será um prazer conversar.</p>
+          <div class="contact-buttons"><a class="button button-primary button-contact"
+              href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=leonardosilva200826%40gmail.com"
+              target="_blank" rel="noopener noreferrer"><svg>
+                <use href="#i-mail" />
+              </svg><span data-i18n="sendEmail">Enviar um e-mail</span><svg>
+                <use href="#i-up-right" />
+              </svg></a><button class="button button-outline button-copy" id="copy-email" type="button"
+              data-email="leonardosilva200826@gmail.com"><svg class="copy-icon">
+                <use href="#i-copy" />
+              </svg><span data-i18n="copyEmail">Copiar e-mail</span></button></div>
+          <div class="contact-details"><a
+              href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=leonardosilva200826%40gmail.com"
+              target="_blank" rel="noopener noreferrer">leonardosilva200826@gmail.com</a><a
+              href="https://github.com/trenkiz17" target="_blank" rel="noopener noreferrer">github.com/trenkiz17 <svg>
+                <use href="#i-up-right" />
+              </svg></a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="footer-brand" href="#inicio">L<span>.</span></a><span>© <span
+          id="year">2026</span> Leonardo Barbosa. <span data-i18n="footerRights">Feito com dedicação e
+          código.</span></span><a class="back-top" href="#inicio"><span data-i18n="backToTop">Voltar ao
+          topo</span><span>↑</span></a></div>
   </footer>
-
-  <script>
-    // Menu responsivo
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
+
 </html>
