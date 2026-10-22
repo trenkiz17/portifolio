@@ -1,5 +1,5 @@
 
-# 👨‍💻 Leonardo Barbosa Silva
+#  Leonardo Barbosa Silva
 
 ### Desenvolvedor em formação | Técnico em Informática | Automação Industrial
 
